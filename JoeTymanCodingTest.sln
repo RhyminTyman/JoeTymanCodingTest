@@ -1,16 +1,16 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONXMLConsoleApp", "..\JSONXMLConsoleApp\JSONXMLConsoleApp\JSONXMLConsoleApp.csproj", "{B0D0F025-2AAB-4E5A-AEF1-726B9CF5DA9D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONXMLWebservice", "..\JSONXMLWebservice\JSONXMLWebservice\JSONXMLWebservice.csproj", "{60DF5F7F-A483-452D-B4CA-5568479DD5F3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLJSONConvertor", "..\XMLJSONConvertor\XMLJSONConvertor\XMLJSONConvertor.csproj", "{BDB68CEA-E87F-45F3-8438-A1C64308DFA1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{53DC14AC-CDC5-405A-A378-E105158EF210}"
 	ProjectSection(SolutionItems) = preProject
 		README.txt = README.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONXMLConsoleApp", "JSONXMLConsoleApp\JSONXMLConsoleApp.csproj", "{B0D0F025-2AAB-4E5A-AEF1-726B9CF5DA9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONXMLWebservice", "JSONXMLWebservice\JSONXMLWebservice.csproj", "{60DF5F7F-A483-452D-B4CA-5568479DD5F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLJSONConvertor", "XMLJSONConvertor\XMLJSONConvertor.csproj", "{BDB68CEA-E87F-45F3-8438-A1C64308DFA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,10 @@ Global
 		{BDB68CEA-E87F-45F3-8438-A1C64308DFA1}.Debug|x86.Build.0 = Debug|Any CPU
 		{BDB68CEA-E87F-45F3-8438-A1C64308DFA1}.Release|x86.ActiveCfg = Release|Any CPU
 		{BDB68CEA-E87F-45F3-8438-A1C64308DFA1}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0D0F025-2AAB-4E5A-AEF1-726B9CF5DA9D} = {53DC14AC-CDC5-405A-A378-E105158EF210}
+		{60DF5F7F-A483-452D-B4CA-5568479DD5F3} = {53DC14AC-CDC5-405A-A378-E105158EF210}
+		{BDB68CEA-E87F-45F3-8438-A1C64308DFA1} = {53DC14AC-CDC5-405A-A378-E105158EF210}
 	EndGlobalSection
 EndGlobal

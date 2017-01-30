@@ -5,6 +5,8 @@ namespace XMLJSONConvertor
 {
 	public class DataProcessor
 	{
+		private const string XML = "xml";
+		private const string JSON = "JSON";
 		private string originalFile;
 		private XmlDocument openedXMLFile  = new XmlDocument();
 		private string fileExtension;
@@ -37,14 +39,14 @@ namespace XMLJSONConvertor
 		public bool CheckFile()
 		{
 			if (originalFile.IsJson()){
-				log += "Source file is JSON will convert to XML";
-				fileExtension = "JSON";
+				log += "Source file is JSON will be converted to XML";
+				fileExtension = JSON;
 				return true;
 			}
 			try{
 				openedXMLFile.LoadXml(originalFile);
-				log += "Source file is XML will convert to JSON";
-				fileExtension = "xml";
+				log += "Source file is XML will be converted to JSON";
+				fileExtension = XML;
 				return true;
 			}catch {
 				log += "File neither XML or JSON";
@@ -52,7 +54,7 @@ namespace XMLJSONConvertor
 			}
 		}
 		public string ConvertFile(){
-			if (fileExtension == "JSON"){
+			if (fileExtension == JSON){
 				return JsonConvert.DeserializeXmlNode(originalFile).OuterXml;
 			}else { 
 				return JsonConvert.SerializeXmlNode(openedXMLFile);

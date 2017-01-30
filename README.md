@@ -8,4 +8,4 @@ One a DLL that handles the actual work of the checking the file then converting.
 There is a console app, that requires you to pass two command line arguements. One for the source file and one for the target file, it first reads the target file to string, passes it to the DLL and then writes the convert text to a file. To run it you would need to from the command line you would need to navigate to the application directory and enter `JSONXMLConsoleApp.exe [sourcefile] [targetfile]`.
 
 ##JSONXMLWebservice:
-This is a RESTful web service that requires you to POST one file either XML or JSON to `api/process` and then returns a response with the converted file. If that file isn't XML or JSON it will return a 205 HTTP error.
+This is a RESTful web service that requires you to POST one file either XML or JSON to `api/process` and then returns a response with the converted file. If that file isn't XML or JSON it will return a 405 HTTP error.

@@ -15,7 +15,6 @@ class ConvertedFile : IHttpActionResult
 	public ConvertedFile(string _content){
 		myDataProcessor = new DataProcessor(_content);
 	}
-
 	public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken){
 		if (myDataProcessor.CheckFile()){
 			var response = new HttpResponseMessage(HttpStatusCode.OK)

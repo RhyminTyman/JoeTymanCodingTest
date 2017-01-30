@@ -21,6 +21,15 @@ namespace JSONXMLWebservice.Controllers
 
 			var provider = new MultipartMemoryStreamProvider();
 			await Request.Content.ReadAsMultipartAsync(provider);
+			/*
+			 * In theory the user could submit multiple files in the 
+			 * POST however since I only want to process one file
+			 * and send it back I am send back an error if I get more
+			 * than one file
+			 */
+			if (provider.Contents.Count != 1)
+				throw new HttpResponseException(HttpStatusCode.Forbidden);
+			
 			var buffer = await provider.Contents[0].ReadAsStreamAsync();
 
 			return new ConvertedFile(FileMaker.GenerateStringFromStream(buffer));
